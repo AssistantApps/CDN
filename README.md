@@ -14,7 +14,7 @@ _As part of the Oct 2022 migration, all the files on the CDN have been placed he
 <br />
 
 ## 🔗 Links
-[![Website](https://img.shields.io/badge/Website-nmsassistant.com-blue?color=7986cc&style=for-the-badge)][assistantappsWebsite] <br />
+[![Website](https://img.shields.io/badge/Website-assistantapps.com-blue?color=7986cc&style=for-the-badge)][assistantappsWebsite] <br />
 [![Discord](https://img.shields.io/badge/Discord-AssistantApps-blue?color=5865F2&style=for-the-badge)][discord] <br />
 
 
