@@ -12,22 +12,24 @@ async function generateHtml() {
 
 async function generateHtmlForFolder(folder) {
 	let fileLists = [];
-	
-    const allFiles = fs.readdirSync(folder, { withFileTypes: true });
-    for (const dirent of allFiles) {
-        if (dirent.isDirectory()) {
+
+	const allFiles = fs.readdirSync(folder, { withFileTypes: true });
+	for (const dirent of allFiles) {
+		if (dirent.isDirectory()) {
 			fileLists.push(getLink(0, dirent.name));
-			await generateHtmlForFolder(`./cdnFiles/${dirent.name}`, `./${dirent.name}/`);
+			await generateHtmlForFolder(`./${folder}/${dirent.name}`, `./${dirent.name}/`);
 			continue;
 		}
-        if (dirent.name[0] == ".") continue;
-        if (dirent.name[0] == "_") continue;
-			fileLists.push(getLink(1, dirent.name));
-    }
-	
+
+		if (dirent.name.includes('index.html')) continue;
+		if (dirent.name[0] == ".") continue;
+		if (dirent.name[0] == "_") continue;
+		fileLists.push(getLink(1, dirent.name));
+	}
+
 	fileLists.sort();
-	
-    let htmlString = `
+
+	let htmlString = `
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,7 +52,7 @@ async function generateHtmlForFolder(folder) {
 </body>
 </html>
 	`;
-    fs.writeFile(`${folder}/index.html`, htmlString, ['utf8'], () => { });
+	fs.writeFile(`${folder}/index.html`, htmlString, ['utf8'], () => { });
 }
 
 function getLink(type, name) {
