@@ -9,7 +9,7 @@
 This repo just holds some static assets, its not much to look at but a lot of the web assets will likely use these assets so that it is easy to change icons from one place 😋
 
 ### Migration work
-_As part of the Oct 2022 migration, all the files on the CDN have been placed here although some folders should only be here temporarily. The `Translation` and `uploads` folders will be moved to a new location
+_As part of the Oct 2022 migration, all the files on the CDN have been placed here although some folders should only be here temporarily. The `Translation` and `uploads` folders will be moved to a new location_
 
 <br />
 
