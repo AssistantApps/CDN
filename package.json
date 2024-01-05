@@ -1,6 +1,6 @@
 {
   "name": "assistantapps-cdn",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A place to store static files on the web for free 😉",
   "main": "buildIndex.js",
   "scripts": {
